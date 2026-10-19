@@ -1,0 +1,250 @@
+
+/* VELTRIX MOBILE FIX */
+
+@media (max-width: 700px) {
+  .navbar {
+    width: calc(100% - 36px);
+    height: 70px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px;
+    background: rgba(14, 13, 27, 0.97);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(167,139,250,0.22);
+    border-radius: 14px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+  }
+
+  .navbar .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(167,139,250,0.1);
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .hero {
+    width: calc(100% - 36px);
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 65px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 11vw, 58px);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-note {
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-top: 32px;
+  }
+
+  .visual-wrap {
+    min-height: 350px;
+    margin: 0 8px;
+  }
+
+  .visual-card {
+    min-height: 320px;
+    padding: 16px;
+  }
+
+  .visual-art {
+    height: 205px;
+  }
+
+  .art-ring {
+    width: 155px;
+    height: 155px;
+  }
+
+  .art-core {
+    font-size: 85px;
+  }
+
+  .orbit {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit-two {
+    width: 380px;
+    height: 380px;
+  }
+
+  .tag-top {
+    right: -5px;
+    top: 15px;
+  }
+
+  .tag-bottom {
+    left: -5px;
+    bottom: 15px;
+  }
+
+  .intro-strip {
+    gap: 12px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .services-preview {
+    width: calc(100% - 36px);
+    padding: 75px 0;
+  }
+
+  .section-heading h2,
+  .closing-cta h2 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 23px;
+  }
+
+  .service-card h3 {
+    margin-top: 20px;
+  }
+
+  .service-card p {
+    margin-bottom: 16px;
+  }
+
+  .closing-cta {
+    width: calc(100% - 36px);
+    padding: 55px 18px;
+    margin-bottom: 65px;
+  }
+
+  .footer {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 18px;
+    padding-top: 38px;
+  }
+
+  .footer .f-bottom {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .section,
+  .contact-page,
+  .discord-band {
+    width: calc(100% - 36px);
+  }
+
+  .section {
+    padding-bottom: 70px;
+  }
+
+  .contact-page {
+    padding: 60px 0 70px;
+  }
+
+  .contact-form {
+    padding: 22px 18px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .process-grid,
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .discord-band {
+    padding: 28px 22px;
+    margin-bottom: 65px;
+  }
+
+  .discord-band .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .card-top {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero::before {
+    background-position: center top;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(8, 8, 17, 0.78),
+        rgba(8, 8, 17, 0.94)
+      ),
+      url("bg.jpg");
+    border-radius: 14px;
+  }
+}

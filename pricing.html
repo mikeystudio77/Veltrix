@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080811">
+  <meta name="description" content="Explore VELTRIX website design and digital branding packages.">
+  <title>Pricing | VELTRIX</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080811'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='700' font-size='42' text-anchor='middle' fill='%23a78bfa'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <style>
+    .pricing-page {
+      width: min(1180px, calc(100% - 36px));
+      margin: auto;
+      padding: 85px 0 100px;
+    }
+
+    .pricing-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .pricing-heading h1 {
+      font: 600 clamp(42px, 8vw, 68px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -2.5px;
+      margin: 22px 0;
+    }
+
+    .pricing-heading p {
+      color: #9997b2;
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 29px 24px;
+      background: linear-gradient(145deg, #141424, #0d0d18);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 15px;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(167,139,250,.45);
+    }
+
+    .price-card.featured {
+      border-color: rgba(167,139,250,.65);
+      background:
+        radial-gradient(ellipse at top, rgba(139,92,246,.17), transparent 65%),
+        #11101f;
+      box-shadow: 0 15px 55px rgba(124,58,237,.09);
+    }
+
+    .popular-label {
+      align-self: flex-start;
+      background: rgba(167,139,250,.13);
+      color: #d8caff;
+      border: 1px solid rgba(167,139,250,.3);
+      border-radius: 5px;
+      padding: 5px 9px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .plan-name {
+      font: 600 21px 'Space Grotesk', sans-serif;
+    }
+
+    .plan-description {
+      min-height: 44px;
+      margin-top: 9px;
+      color: #9997b2;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .price {
+      margin: 27px 0 8px;
+      font: 600 39px 'Space Grotesk', sans-serif;
+      letter-spacing: -1.5px;
+    }
+
+    .price small {
+      color: #9997b2;
+      font: 400 12px 'DM Sans', sans-serif;
+      letter-spacing: 0;
+    }
+
+    .price-note {
+      color: #9997b2;
+      font-size: 11px;
+      margin-bottom: 23px;
+    }
+
+    .plan-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 12px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .featured .plan-button {
+      color: #100b1c;
+      background: linear-gradient(110deg, #a78bfa, #d879f9);
+      border-color: transparent;
+    }
+
+    .plan-button:hover {
+      border-color: #a78bfa;
+      transform: translateY(-2px);
+    }
+
+    .plan-divider {
+      height: 1px;
+      background: rgba(255,255,255,.08);
+      margin: 25px 0;
+    }
+
+    .feature-title {
+      color: #d8d3e8;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 25px;
+    }
+
+    .feature-list li {
+      color: #aaa7bf;
+      font-size: 12px;
+      line-height: 1.6;
+      display: flex;
+      gap: 9px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: #c4b5fd;
+      font-weight: 700;
+    }
+
+    .price-footer {
+      text-align: center;
+      color: #77758f;
+      font-size: 11px;
+      line-height: 1.8;
+      margin-top: 35px;
+    }
+
+    .pricing-faq {
+      margin-top: 75px;
+    }
+
+    .pricing-faq h2 {
+      font: 600 30px 'Space Grotesk', sans-serif;
+      margin-bottom: 22px;
+    }
+
+    .faq-item {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+    }
+
+    .faq-item h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: #9997b2;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 800px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+      }
+
+      .plan-description {
+        min-height: 0;
+      }
+
+      .pricing-page {
+        padding-top: 60px;
+      }
+
+      .pricing-heading {
+        margin-bottom: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <a class="logo" href="index.html">VELTRIX<span>.</span></a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="contact.html">Let's Talk <span>↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+  </header>
+
+  <main id="main" class="pricing-page">
+    <section class="pricing-heading">
+      <span class="eyebrow">SIMPLE & TRANSPARENT</span>
+      <h1>Good work.<br><span class="gradient-text">Clear pricing.</span></h1>
+      <p>Choose a starting point for your next digital project. Every package is designed around a clear scope, with custom quotes available for bigger ideas.</p>
+    </section>
+
+    <section class="pricing-grid">
+
+      <article class="price-card">
+        <h2 class="plan-name">Starter</h2>
+        <p class="plan-description">For individuals and small businesses ready to establish an online presence.</p>
+
+        <div class="price">₹999<small> / project</small></div>
+        <p class="price-note">Starting price</p>
+
+        <a class="plan-button" href="contact.html">Choose Starter ↗</a>
+
+        <div class="plan-divider"></div>
+        <p class="feature-title">WHAT'S INCLUDED</p>
+
+        <ul class="feature-list">
+          <li>Single-page website</li>
+          <li>Mobile-friendly layout</li>
+          <li>Basic contact information section</li>
+          <li>One revision round</li>
+          <li>Free deployment assistance</li>
+        </ul>
+      </article>
+
+      <article class="price-card featured">
+        <span class="popular-label">RECOMMENDED</span>
+        <h2 class="plan-name">Professional</h2>
+        <p class="plan-description">For growing brands that need more room to explain their services.</p>
+
+        <div class="price">₹2,499<small> / project</small></div>
+        <p class="price-note">Starting price</p>
+
+        <a class="plan-button" href="contact.html">Choose Professional ↗</a>
+
+        <div class="plan-divider"></div>
+        <p class="feature-title">WHAT'S INCLUDED</p>
+
+        <ul class="feature-list">
+          <li>Up to 4 website pages</li>
+          <li>Custom visual design</li>
+          <li>Responsive mobile layout</li>
+          <li>Contact or inquiry section</li>
+          <li>Two revision rounds</li>
+          <li>Free deployment assistance</li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <h2 class="plan-name">Premium</h2>
+        <p class="plan-description">For brands that need a more tailored website and richer interactions.</p>
+
+        <div class="price">₹4,999<small> / project</small></div>
+        <p class="price-note">Starting price</p>
+
+        <a class="plan-button" href="contact.html">Discuss Premium ↗</a>
+
+        <div class="plan-divider"></div>
+        <p class="feature-title">WHAT'S INCLUDED</p>
+
+        <ul class="feature-list">
+          <li>Up to 6 website pages</li>
+          <li>More tailored visual direction</li>
+          <li>Responsive design</li>
+          <li>Interactive UI elements</li>
+          <li>Two revision rounds</li>
+          <li>Deployment assistance</li>
+        </ul>
+      </article>
+
+    </section>
+
+
+    <section class="custom-banner">
+      <div>
+        <h2>Need a Discord bot or something custom?</h2>
+        <p>Bots and bigger projects are quoted individually, based on the features you need. Tell us your idea and we'll come back with a clear scope and price.</p>
+      </div>
+      <a class="button button-primary" href="contact.html">Request a Quote ↗</a>
+    </section>
+
+    <p class="price-footer">
+      Prices are starting estimates, not final quotes. Content, hosting, paid assets,
+      advanced features and third-party services may cost extra. Scope is confirmed before work begins.
+    </p>
+
+    <section class="pricing-faq">
+      <h2>Frequently asked questions</h2>
+
+      <article class="faq-item">
+        <h3>Can I request a custom package?</h3>
+        <p>Yes. Share your idea and requirements, and we'll discuss a suitable scope and quote.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Is hosting included?</h3>
+        <p>Free deployment options may be available for eligible static websites. Paid hosting, domains and third-party services are separate unless agreed otherwise.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>How do revisions work?</h3>
+        <p>Each package includes a defined number of revision rounds. New features or major changes outside the agreed scope may require an additional quote.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>How long will my website take?</h3>
+        <p>Delivery time depends on the pages, features and content required. We'll confirm an estimated timeline before starting.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="f-brand">
+      <a class="logo" href="index.html">VELTRIX<span>.</span></a>
+      <p>Digital Experiences. Built to Stand Out. Websites and Discord bots made with personality.</p>
+    </div>
+    <div>
+      <h4>EXPLORE</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>GET IN TOUCH</h4>
+      <ul>
+        <li><a href="mailto:veltrixstudio.shop@gmail.com">veltrixstudio.shop@gmail.com</a></li>
+        <li><a href="https://discord.gg/dnRvZYZ9rr" target="_blank" rel="noopener noreferrer">Join our Discord ↗</a></li>
+      </ul>
+    </div>
+    <div class="f-bottom">
+      <span>© <span data-year>2026</span> VELTRIX STUDIO</span>
+      <span>DESIGN · DEVELOPMENT · DISCORD BOTS</span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
