@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080811">
+  <title>Services | VELTRIX</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080811'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='700' font-size='42' text-anchor='middle' fill='%23a78bfa'%3EV%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="Website design, UI, branding, interactive websites and custom Discord bots by VELTRIX Studio.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <style>
+    .services-page {
+      width: min(1100px, calc(100% - 48px));
+      margin: auto;
+      padding: 90px 0;
+    }
+
+    .services-hero {
+      text-align: center;
+      padding: 35px 0 65px;
+    }
+
+    .services-hero h1 {
+      font-weight: 600;
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin: 20px 0;
+    }
+
+    .services-hero p {
+      color: #aaa8bc;
+      max-width: 590px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-item {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 18px;
+      background: rgba(255,255,255,.025);
+      transition: .3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(166,105,255,.55);
+      background: rgba(145,80,255,.06);
+    }
+
+    .service-item .service-number {
+      position: static;
+      display: block;
+      color: #b38aff;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .service-item h2 {
+      font-size: 25px;
+      margin: 24px 0 12px;
+    }
+
+    .service-item p {
+      color: #aaa8bc;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .service-item ul {
+      padding-left: 19px;
+      color: #d2cede;
+      line-height: 2;
+      font-size: 13px;
+    }
+
+    .service-bottom {
+      text-align: center;
+      margin-top: 70px;
+      padding: 40px 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #171027, #0c0b15);
+      border: 1px solid rgba(177,127,255,.2);
+    }
+
+    .service-bottom h2 {
+      font-size: clamp(30px, 5vw, 45px);
+      margin: 0 0 15px;
+    }
+
+    .service-bottom .cta-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+    .service-bottom p {
+      color: #aaa8bc;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 650px) {
+      .services-page {
+        width: calc(100% - 36px);
+        padding: 55px 0;
+      }
+
+      .services-hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .service-item {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <a class="logo" href="index.html">VELTRIX<span>.</span></a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="contact.html">Let's Talk <span>↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+  </header>
+
+  <main id="main" class="services-page">
+    <section class="services-hero">
+      <span class="eyebrow">WHAT WE DO</span>
+      <h1>Ideas into<br><span class="gradient-text">digital reality.</span></h1>
+      <p>
+        From bold websites to memorable digital experiences,
+        we help ideas turn into something people remember.
+      </p>
+    </section>
+
+    <section class="service-list">
+      <article class="service-item">
+        <span class="service-number">01 / WEB</span>
+        <h2>Website Design</h2>
+        <p>Modern, responsive websites designed around your brand and goals.</p>
+        <ul>
+          <li>Business and portfolio websites</li>
+          <li>Landing pages</li>
+          <li>Mobile-friendly layouts</li>
+          <li>Contact and inquiry sections</li>
+        </ul>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">02 / UI</span>
+        <h2>UI Experiences</h2>
+        <p>Clean interfaces that make digital products feel polished and easy to use.</p>
+        <ul>
+          <li>Custom visual layouts</li>
+          <li>Interactive elements</li>
+          <li>Dark and modern themes</li>
+          <li>Responsive interface design</li>
+        </ul>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">03 / BRAND</span>
+        <h2>Digital Branding</h2>
+        <p>A consistent visual identity that helps your project stand apart.</p>
+        <ul>
+          <li>Color and typography direction</li>
+          <li>Visual style concepts</li>
+          <li>Brand-focused website design</li>
+          <li>Social graphics where agreed</li>
+        </ul>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">04 / MOTION</span>
+        <h2>Interactive Websites</h2>
+        <p>Add personality with useful interactions and small moments of delight.</p>
+        <ul>
+          <li>Animated UI elements</li>
+          <li>Card-flip experiences</li>
+          <li>Simple browser-based games</li>
+          <li>Smooth scrolling effects</li>
+        </ul>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">05 / BOTS</span>
+        <h2>Discord Bots</h2>
+        <p>Custom bots that keep your server safe, organised and fun, built around your community's needs.</p>
+        <ul>
+          <li>Moderation and auto-mod tools</li>
+          <li>Welcome and verification flows</li>
+          <li>Custom commands and embeds</li>
+          <li>Ticket and support systems where agreed</li>
+        </ul>
+      </article>
+
+      <article class="service-item">
+        <span class="service-number">06 / LAUNCH</span>
+        <h2>Launch &amp; Support</h2>
+        <p>We don't just hand over files. We help your project get online and working.</p>
+        <ul>
+          <li>Deployment assistance</li>
+          <li>Revision rounds included in every package</li>
+          <li>Guidance on domains and hosting</li>
+          <li>Clear scope agreed before work begins</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="service-bottom">
+      <h2>Have an idea in mind?</h2>
+      <p>Let's figure out what we can build for your project.</p>
+      <div class="cta-row"><a class="button button-primary" href="contact.html">Start a Project ↗</a> <a class="button button-secondary" href="https://discord.gg/dnRvZYZ9rr" target="_blank" rel="noopener noreferrer">Chat on Discord ↗</a></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="f-brand">
+      <a class="logo" href="index.html">VELTRIX<span>.</span></a>
+      <p>Digital Experiences. Built to Stand Out. Websites and Discord bots made with personality.</p>
+    </div>
+    <div>
+      <h4>EXPLORE</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>GET IN TOUCH</h4>
+      <ul>
+        <li><a href="mailto:veltrixstudio.shop@gmail.com">veltrixstudio.shop@gmail.com</a></li>
+        <li><a href="https://discord.gg/dnRvZYZ9rr" target="_blank" rel="noopener noreferrer">Join our Discord ↗</a></li>
+      </ul>
+    </div>
+    <div class="f-bottom">
+      <span>© <span data-year>2026</span> VELTRIX STUDIO</span>
+      <span>DESIGN · DEVELOPMENT · DISCORD BOTS</span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

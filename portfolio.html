@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080811">
+  <meta name="description" content="Explore websites and digital design projects by VELTRIX Studio.">
+  <title>Portfolio | VELTRIX</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080811'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='700' font-size='42' text-anchor='middle' fill='%23a78bfa'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    .portfolio-page {
+      width: min(1180px, calc(100% - 36px));
+      margin: auto;
+      padding: 90px 0;
+    }
+
+    .portfolio-intro {
+      max-width: 680px;
+      margin-bottom: 48px;
+    }
+
+    .portfolio-intro h1 {
+      font: 600 clamp(42px, 8vw, 68px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -2px;
+      margin: 22px 0;
+    }
+
+    .portfolio-intro p {
+      color: #9997b2;
+      line-height: 1.9;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.09);
+      background: #10101d;
+      border-radius: 15px;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(167,139,250,.5);
+    }
+
+    .project-art {
+      min-height: 230px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(167,139,250,.24), transparent 65%),
+        #0b0b17;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .project-art h2 {
+      font: 600 clamp(27px, 5vw, 43px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -1px;
+    }
+
+    .project-art span {
+      display: block;
+      color: #c4b5fd;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-top: 14px;
+    }
+
+    .project-info {
+      padding: 24px;
+    }
+
+    .project-info h3 {
+      font: 600 20px 'Space Grotesk', sans-serif;
+      margin-bottom: 9px;
+    }
+
+    .project-info p {
+      color: #9997b2;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: #c4b5fd;
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-note {
+      margin-top: 30px;
+      padding: 18px;
+      border: 1px solid rgba(167,139,250,.18);
+      border-radius: 10px;
+      color: #9997b2;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .portfolio-page { padding: 60px 0; }
+      .project-grid { grid-template-columns: 1fr; }
+      .project-art { min-height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <a class="logo" href="index.html">VELTRIX<span>.</span></a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="contact.html">Let's Talk <span>↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+  </header>
+
+  <main id="main" class="portfolio-page">
+    <div class="portfolio-intro">
+      <span class="eyebrow">SELECTED WORK</span>
+      <h1>Ideas made<br><span class="gradient-text">visible.</span></h1>
+      <p>A collection of digital experiments, websites and creative projects. Every project starts with an idea and grows through design.</p>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-art">
+          <div>
+            <h2>ETHEREAL<br>HALLOWEEN</h2>
+            <span>SEASONAL WEB EXPERIENCE</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">WEB DESIGN · INTERACTIVE</span>
+          <h3>Halloween Experience</h3>
+          <p>A seasonal website concept with a spooky visual direction and interactive elements.</p>
+          <p style="margin-top:12px"><a href="https://etherealhalloween.vercel.app" target="_blank" rel="noopener noreferrer">View live project ↗</a></p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-art">
+          <div>
+            <h2>DESIGNERS<br>HUB</h2>
+            <span>CREATIVE DESIGN STUDIO</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">BRANDING · WEB DESIGN</span>
+          <h3>Designers Hub Studio</h3>
+          <p>A digital studio concept for presenting design packages and creative services.</p>
+          <p style="margin-top:12px"><a href="https://designers-hub-eight.vercel.app/#home" target="_blank" rel="noopener noreferrer">View live project ↗</a></p>
+        </div>
+      </article>
+
+      <a class="project-card next-card" href="contact.html">
+        <div class="project-art">
+          <div>
+            <h2>YOUR<br>IDEA</h2>
+            <span>COULD BE NEXT</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">WEBSITE · DISCORD BOT · BRAND</span>
+          <h3>Start your project</h3>
+          <p>Have something in mind? Tell us about it and we'll shape it into something real.</p>
+          <p style="margin-top:12px">Get in touch ↗</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="f-brand">
+      <a class="logo" href="index.html">VELTRIX<span>.</span></a>
+      <p>Digital Experiences. Built to Stand Out. Websites and Discord bots made with personality.</p>
+    </div>
+    <div>
+      <h4>EXPLORE</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>GET IN TOUCH</h4>
+      <ul>
+        <li><a href="mailto:veltrixstudio.shop@gmail.com">veltrixstudio.shop@gmail.com</a></li>
+        <li><a href="https://discord.gg/dnRvZYZ9rr" target="_blank" rel="noopener noreferrer">Join our Discord ↗</a></li>
+      </ul>
+    </div>
+    <div class="f-bottom">
+      <span>© <span data-year>2026</span> VELTRIX STUDIO</span>
+      <span>DESIGN · DEVELOPMENT · DISCORD BOTS</span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
