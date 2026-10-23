@@ -98,15 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = (data.get("message") || "").toString().trim();
 
       const subject = `New project inquiry${type ? " - " + type : ""} (${name})`;
+      const promo = window.VeltrixPromo ? window.VeltrixPromo.summary() : "";
       const body = [
         `Name: ${name}`,
         `Email: ${email}`,
         `Project type: ${type || "Not specified"}`,
         `Budget: ${budget || "Not specified"}`,
+        promo ? `Promo: ${promo}` : null,
         "",
         "Project details:",
         message,
-      ].join("\n");
+      ].filter((line) => line !== null).join("\n");
 
       const url = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = url;
